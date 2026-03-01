@@ -1,0 +1,237 @@
+/* article-section css start */
+.article-section {
+    padding: 50px 0;
+    background: var(--section-bg);
+}
+
+.article-section .container {
+    max-width: 670px;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: capitalize;
+    border-bottom: 1px solid transparent;
+    transition: all ease .3s;
+    position: relative;
+}
+
+.share-btn .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.share-btn::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--black);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.share-btn .icon img {
+    transform: rotate(-90deg);
+}
+
+.share-btn:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.article-content-wrapper {
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article-content-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.article-content-title-wrap .btn {
+    padding: 10px 20px;
+    margin: 0 !important;
+    font-size: 14px;
+}
+
+h4.article-content-title {
+    font-weight: 300;
+    text-transform: unset;
+}
+
+.article-content-title {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.article-content-text {
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.article-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.article-content-list li {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.article-content-list li p {
+    font-weight: 300;
+}
+
+.article-content-product .product-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.article-content-box {
+    background: var(--black);
+    padding: 20px;
+}
+
+.article-content-box .article-content-title {
+    color: var(--white);
+}
+
+.article-content .btn {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.article-content-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.article-content-product-grid-item .product-card {
+    border-radius: 6px;
+}
+
+.article-content-product-grid-item .product-card .card-content {
+    padding: 15px 10px;
+    background: var(--white);
+}
+
+.article-content-product-grid-item .product-card .card-content .card-title {
+    font-size: 14px;
+}
+
+.article-content-product-grid-item .product-card .card-content .price .latest-price {
+    font-size: 14px;
+}
+
+.article-content-product-grid-item .product-card .card-content .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.article-section-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--black);
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.article-section-btn svg {
+    width: 24px;
+}
+
+.article-section-btn:hover {
+    text-decoration: underline;
+}
+
+/* article-section css end */
+
+@media only screen and (max-width: 575px) {
+
+    /* article-section css start */
+    .article-section {
+        padding: 20px 0;
+    }
+
+    .share-btn {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .share-btn .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .article-content-wrapper {
+        margin: 16px 0 0 0;
+        gap: 16px;
+    }
+
+    .article-content {
+        gap: 16px;
+    }
+
+    .article-content-text {
+        line-height: 20px;
+    }
+
+    .article-content-product .product-card .card-content .card-title {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .article-content-product .product-card .card-content .price .latest-price {
+        font-size: 14px;
+    }
+
+    .article-content-product .product-card .btn {
+        font-size: 12px;
+        padding: 10px 20px;
+        font-weight: 500;
+    }
+
+    .article-content-box {
+        padding: 16px;
+    }
+
+    .article-content-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+
+    .article-content-product-grid-item:last-child {
+        grid-column: span 2;
+    }
+
+    /* article-section css end */
+}

@@ -7,6 +7,7 @@
     --paragraph-text-color: #000000;
     --brand-color: #4B5878;
     --item-bg: #f4f4f4;
+    --section-bg: #f7f9ff;
     --card-bg: #f9f9f9;
     --border-color: #d8d8d8;
     --text-muted: #777777;
@@ -90,7 +91,7 @@ p {
     color: var(--paragraph-text-color);
     font-family: var(--pragraph-font);
     margin: 0;
-    line-height: 28px;
+    line-height: 23px;
 }
 
 .container {
@@ -135,35 +136,15 @@ button {
     background-color: var(--btn-bg);
     border: 1px solid var(--black);
     overflow: hidden;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 8px;
     position: relative;
     transition: ease .3s;
+    font-family: var(--font-heading-family);
 }
 
 .btn-primary:hover {
     color: var(--black);
-}
-
-.btn-primary::after {
-    position: absolute;
-    content: "";
-    right: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
     background-color: var(--white);
-    color: var(--black);
-    z-index: -1;
-    transition: ease .3s;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    transform: scale(0);
-}
-
-.btn-primary:hover::after {
-    transform: scale(1);
 }
 
 .section-heading-wrapper {
@@ -875,7 +856,6 @@ button {
 }
 
 .product-card .card-img .primary-img {
-    padding: 20px;
     background-color: var(--card-bg);
 }
 
@@ -885,7 +865,6 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
@@ -928,30 +907,37 @@ button {
 }
 
 .product-card:hover .card-content {
-    padding: 15px;
     text-align: center;
     border-top: 0;
     transition: ease .7s;
 }
 
+.product-card .card-content .card-title {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: normal;
+}
+
 .product-card .card-content .price {
     margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .product-card .card-content .price .latest-price {
     color: var(--black);
-    font-size: 22px;
-    font-weight: 600;
-    margin-right: 4px;
+    font-size: 16px;
 }
 
 .product-card .card-content .price .previous-price {
     color: var(--black);
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    margin-right: 4px;
     opacity: 0.5;
     text-decoration: line-through;
-    margin-left: 4px;
 }
 
 .product-card .card-content .varient {
@@ -962,6 +948,10 @@ button {
 .product-card .card-content .varient .varient-text {
     font-size: 13px;
     line-height: 1.2;
+}
+
+.product-card .card-content .btn {
+    margin: 16px 0 0 0;
 }
 
 .trending-slider .swiper-button-prev,
@@ -1665,7 +1655,7 @@ button {
     padding: 20px;
 }
 
-.mobile-heading{
+.mobile-heading {
     display: none;
 }
 
@@ -2403,7 +2393,7 @@ button {
         transform: scale(0);
     }
 
-    .filter-box.active{
+    .filter-box.active {
         transform: scale(1);
     }
 
@@ -2413,11 +2403,11 @@ button {
         display: block;
     }
 
-    .mobile-heading{
+    .mobile-heading {
         display: block;
     }
 
-    .filter-heading{
+    .filter-heading {
         display: flex;
         align-items: center;
         justify-content: space-between;

@@ -173,6 +173,11 @@ h4.article-content-title {
     text-decoration: underline;
 }
 
+.article-news-letter-img {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
 /* article-section css end */
 
 @media only screen and (max-width: 575px) {

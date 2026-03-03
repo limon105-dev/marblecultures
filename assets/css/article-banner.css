@@ -15,6 +15,8 @@
 .article-banner-img {
     width: 100%;
     max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .article-banner-conent {
@@ -78,6 +80,10 @@
 
     .article-banner-section .container {
         padding: 0;
+    }
+
+    .article-banner-img {
+        border-radius: 0;
     }
 
     .article-banner-conent {

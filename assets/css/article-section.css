@@ -4,8 +4,15 @@
     background: var(--section-bg);
 }
 
-.article-section .container {
-    max-width: 670px;
+.article-wrapper {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.article-content-main {
+    width: 100%;
+    max-width: 800px;
 }
 
 .share-btn {
@@ -58,6 +65,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.article-content-img {
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .article-content-title-wrap {
@@ -178,7 +190,104 @@ h4.article-content-title {
     border-radius: 10px;
     overflow: hidden;
 }
+
+.article-sidebar {
+    width: 100%;
+    max-width: 400px;
+}
+
+.article-related-product-title {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid var(--black);
+}
+
+.article-related-product-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px 0 0 0;
+}
+
+.article-related-product-item .product-card {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--white);
+}
+
+.article-related-product-item .product-card .card-img {
+    width: 120px;
+}
+
+.article-related-product-item .product-card .card-content {
+    text-align: left;
+    width: calc(100% - 120px);
+}
+
+.article-related-product-item .product-card .card-content .card-title {
+    font-size: 16px;
+}
+
+.article-related-product-item .product-card .card-content .price {
+    justify-content: flex-start;
+}
+
 /* article-section css end */
+
+@media only screen and (max-width: 992px) {
+
+    /* article-section css start */
+    .article-wrapper {
+        gap: 20px;
+    }
+
+    .article-sidebar {
+        max-width: 300px;
+    }
+
+    .article-related-product-item .product-card .card-img {
+        width: 90px;
+    }
+
+    .article-related-product-item .product-card .card-content {
+        width: calc(100% - 90px);
+        padding: 10px;
+    }
+
+    .article-related-product-item .product-card .card-content .card-title {
+        font-size: 13px;
+    }
+
+    .article-related-product-item .product-card .card-content .price {
+        margin: 5px 0 0 0;
+    }
+
+    .article-related-product-item .product-card .card-content .price .latest-price {
+        font-size: 14px;
+    }
+
+    /* article-section css end */
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* article-section css start */
+    .article-wrapper {
+        flex-direction: column;
+    }
+
+    .article-content-main {
+        max-width: 100%;
+    }
+
+    .article-sidebar {
+        max-width: 100%;
+    }
+
+    /* article-section css end */
+}
 
 @media only screen and (max-width: 575px) {
 
